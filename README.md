@@ -1,8 +1,11 @@
 # MakeCode Maker [![Actions Status](https://github.com/microsoft/pxt-maker/workflows/pxt-buildtarget/badge.svg)](https://github.com/microsoft/pxt-maker/actions)
 
-This is an experimental code editor for maker boards - try it at https://maker.makecode.com.
+-Irshad
 
-* [Read the docs](https://maker.makecode.com/about)
+The pxt-maker repo is stripped off to target raspbery pi pico 
+
+- Libs are removed from original repo
+
 
 ## Who is this for?
 
@@ -141,10 +144,6 @@ If you need to modify the `.cpp` files (and have installed yotta), enable yotta 
 pxt serve --localbuild
 ```
 
-### Updates
-
-Make sure to pull changes from all repos regularly. More instructions are at https://github.com/microsoft/pxt#running-a-target-from-localhost
-
 ## Repos 
 
 The pxt-maker target depends on several other repos. The main ones are:
@@ -155,20 +154,3 @@ The pxt-maker target depends on several other repos. The main ones are:
 - https://github.com/lancaster-university/codal-samd21, CODAL SAMD21 layer
 - https://github.com/lancaster-university/codal-circuit-playground, Adafruit CPX layer
 
-## Code of Conduct
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-# Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

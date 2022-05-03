@@ -158,6 +158,7 @@ The pxt-maker target depends on several other repos. The main ones are:
 
 Microsoft Windows [Version 10.0.19042.1645]
 (c) Microsoft Corporation. All rights reserved.
+```c
 
 D:\makecode\pxt_pico>pxt buildtarget --local
 Using target maker with build engine codal
@@ -1027,3 +1028,4 @@ D:\makecode\pxt_pico>
 
 //
 
+```

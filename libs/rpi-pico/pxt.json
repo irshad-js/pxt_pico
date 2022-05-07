@@ -11,7 +11,8 @@
     "core": true,
     "compileServiceVariant": "rp2040",
     "dependencies": {
-        "core---rp2040": "file:../core---rp2040"
+        "core---rp2040": "file:../core---rp2040",
+		"buttons": "file:../buttons"
     },
     "public": true,
     "features": [

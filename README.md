@@ -1028,4 +1028,22 @@ D:\makecode\pxt_pico>
 
 //
 
+
+Also:
+
+D:\makecode\pxt_pico>npm install -g glob-exec
+
+added 14 packages, and audited 15 packages in 2s
+
+1 package is looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+D:\makecode\pxt_pico>npm run svgo
+
+> pxt-maker@0.15.59 svgo
+> glob-exec --foreach "**/boardhd.svg" -- "svgo --config=svgo.yml {{file}} -o {{file.dir}}/board.svg
+
+
 ```

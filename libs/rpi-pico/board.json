@@ -3,36 +3,47 @@
   "visual": {
     "image": "pkg://board.svg",
     "useCrocClips": false,
-    "width": 208.3,
-    "height": 118.4,
+    "width": 473,
+    "height": 191,
     "pinDist": 15,
-    "pinBlocks": [],
-    "leds": [
+    "pinBlocks": [
+	{
+        "x": 454.28,
+        "y": 5.36,
+        "labels": [
+          "GP0"
+        ]
+      },
       {
-        "x": 92.0207047046369,
-        "y": 38.39268871460768,
-        "w": 11.120971341395725,
-        "h": 10.030683027224555,
-        "color": "neopixel",
-        "label": "NEOPIXEL"
+        "x": 430.55,
+        "y": 5.36,
+        "labels": [
+          "GP1"
+        ]
+      }  
+	],
+    "leds": [
+	      {
+        "x": 426,
+        "y": 35.92,
+        "w": 5.2,
+        "h": 18.4,
+        "color": "#ff0000",
+        "label": "LED"
       }
-    ],
+	],
     "touchPads": [],
-    "buttons": [],
-    "reset": {
-      "x": 17.83250718937794,
-      "y": 45.50404575993516,
-      "w": 13.596367783800709,
-      "h": 13.596390332336691
-    }
+    "buttons": []
   },
-  "gpioPinMap": {},
+  "gpioPinMap": {
+	"GP0": "PIN_P0",
+    "GP1": "PIN_P1",
+	"LED": "PIN_P15"
+  },
   "groundPins": [],
   "threeVoltPins": [],
   "i2cPins": {},
-  "onboardComponents": [
-    "pixel"
-  ],
+  "onboardComponents": [],
   "marginWhenBreadboarding": [
     0,
     0,

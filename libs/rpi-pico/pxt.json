@@ -18,7 +18,12 @@
     "features": [
         "pinled",
         "pind0",
-        "pind1",
+        "pind1",        
+		"accelerometer",
+		"storage",
+        "uf2",
+        "light",
+        "screen",
         "jacdac"
     ]
 }

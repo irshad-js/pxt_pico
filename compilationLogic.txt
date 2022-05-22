@@ -1,0 +1,363 @@
+Microsoft Windows [Version 10.0.19042.1706]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\makecode\pxt_pico\projects\fifth_project\built\dockercodal>git checkout v0.9.0
+HEAD is now at e1bb097 Merge pull request #44 from lancaster-university/rp2040-build
+
+D:\makecode\pxt_pico\projects\fifth_project\built\dockercodal>git status
+HEAD detached at v0.9.0
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        functions.json
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\makecode\pxt_pico\projects\fifth_project\built\dockercodal>cat functions.json
+'cat' is not recognized as an internal or external command,
+operable program or batch file.
+
+D:\makecode\pxt_pico\projects\fifth_project\built\dockercodal>docker run --rm -v D:\makecode\pxt_pico\projects\fifth_project\dockercodal/:/src -w /src -u build pext/arm:gcc9 python build.py
+codal-pi-pico is already installed
+Set target: codal-pi-pico
+Using target-locked.json
+Targeting codal-pi-pico
+-- The C compiler identification is GNU 9.2.1
+-- The CXX compiler identification is GNU 9.2.1
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/arm-none-eabi-gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/arm-none-eabi-g++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/arm-none-eabi-gcc
+Supressing -Wexpansion-to-defined.
+Installing dependencies...
+-- Adding library path: (/src/libraries)
+codal-core is already installed
+codal-rp2040 is already installed
+Using library: codal-pi-pico
+Using library: codal-core
+Using library: codal-rp2040
+-- Found Python3: /usr/bin/python3.9 (found version "3.9.5") found components: Interpreter
+CMake Warning at libraries/codal-rp2040/pico-sdk/src/rp2_common/tinyusb/CMakeLists.txt:10 (message):
+  TinyUSB submodule has not been initialized; USB support will be unavailable
+
+  hint: try 'git submodule update --init' from your SDK directory
+  (/src/libraries/codal-rp2040/pico-sdk).
+
+
+ /src/libraries/codal-rp2040/inc
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /src/build
+Scanning dependencies of target pre-process-task
+[  1%] Executing pre process command
+Scanning dependencies of target bs2_default
+-- Configuring done
+[  1%] Building ASM object libraries/codal-rp2040/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir/compile_time_choice.S.o
+-- Generating done
+-- Build files have been written to: /src/libraries/codal-rp2040/pico-sdk/tools/elf2uf2/build
+make[3]: warning: -j10 forced in submake: resetting jobserver mode.
+[  2%] Linking ASM executable ../../../../../../bs2_default.elf
+[  2%] Built target bs2_default
+[100%] Built target elf2uf2
+Scanning dependencies of target bs2_default_padded_checksummed_asm
+/src
+[  3%] Generating bs2_default.bin
+[  3%] Built target pre-process-task
+[  3%] Generating bs2_default_padded_checksummed.S
+[  3%] Built target bs2_default_padded_checksummed_asm
+Scanning dependencies of target codal-core
+[  3%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalCompat.cpp.o
+[  3%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalComponent.cpp.o
+[  4%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalDmesg.cpp.o
+[  4%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalDevice.cpp.o
+[  4%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalFiber.cpp.o
+[  5%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalListener.cpp.o
+[  5%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalHeapAllocator.cpp.o
+[  6%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/CodalUtil.cpp.o
+[  6%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/MemberFunctionCallback.cpp.o
+[  6%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/core/codal_default_target_hal.cpp.o
+[  7%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/AbstractButton.cpp.o
+[  7%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Accelerometer.cpp.o
+[  7%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/CodalUSB.cpp.o
+[  8%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Compass.cpp.o
+[  8%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Display.cpp.o
+[  8%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Gyroscope.cpp.o
+[  9%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/SPI.cpp.o
+[  9%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/I2C.cpp.o
+[ 10%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Sensor.cpp.o
+[ 10%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Serial.cpp.o
+[ 10%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/driver-models/Timer.cpp.o
+[ 11%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/AnalogSensor.cpp.o
+[ 11%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/AnimatedDisplay.cpp.o
+[ 11%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/AsciiKeyMap.cpp.o
+[ 12%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/Button.cpp.o
+[ 12%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/FXOS8700.cpp.o
+[ 12%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/GhostFAT.cpp.o
+[ 13%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/HID.cpp.o
+[ 13%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/HIDJoystick.cpp.o
+[ 13%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/HIDKeyboard.cpp.o
+[ 14%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/HIDMouse.cpp.o
+[ 14%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/ILI9341.cpp.o
+[ 15%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/KeyValueStorage.cpp.o
+[ 15%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/LEDMatrix.cpp.o
+[ 15%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/LIS3DH.cpp.o
+[ 16%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/LSM303Accelerometer.cpp.o
+[ 16%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/LSM303Magnetometer.cpp.o
+[ 16%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/LinearAnalogSensor.cpp.o
+[ 17%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/MAG3110.cpp.o
+[ 17%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/MMA8653.cpp.o
+[ 17%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/MPU6050.cpp.o
+[ 18%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/MessageBus.cpp.o
+[ 18%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/MultiButton.cpp.o
+[ 19%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/NonLinearAnalogSensor.cpp.o
+[ 19%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/PearsonHash.cpp.o
+[ 19%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/PulseIn.cpp.o
+[ 20%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/ST7735.cpp.o
+[ 20%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/ScreenIO.cpp.o
+[ 20%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/StandardSPIFlash.cpp.o
+[ 21%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/TouchButton.cpp.o
+[ 21%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/TouchSensor.cpp.o
+[ 21%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/drivers/USBMSC.cpp.o
+[ 21%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/LevelDetector.cpp.o
+[ 22%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/DataStream.cpp.o
+[ 22%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/LevelDetectorSPL.cpp.o
+[ 23%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/MemorySource.cpp.o
+[ 23%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/Mixer.cpp.o
+[ 24%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/StreamNormalizer.cpp.o
+[ 24%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/streams/Synthesizer.cpp.o
+[ 24%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/BitmapFont.cpp.o
+[ 25%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/CoordinateSystem.cpp.o
+[ 25%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/Event.cpp.o
+[ 26%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/Image.cpp.o
+[ 26%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/ManagedBuffer.cpp.o
+[ 26%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/ManagedString.cpp.o
+[ 26%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/Matrix4.cpp.o
+[ 27%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/RefCountedInit.cpp.o
+[ 27%] Building CXX object libraries/codal-core/CMakeFiles/codal-core.dir/source/types/RefCounted.cpp.o
+[ 27%] Linking CXX static library ../../libcodal-core.a
+[ 27%] Built target codal-core
+Scanning dependencies of target codal-rp2040
+[ 28%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/RP2040I2C.cpp.o
+[ 28%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/RP2040LowLevelTimer.cpp.o
+[ 28%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/RP2040PWM.cpp.o
+[ 29%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/RP2040Pin.cpp.o
+[ 29%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/RP2040Spi.cpp.o
+[ 29%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/RP2040USB.cpp.o
+[ 30%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/ZSingleWireSerial.cpp.o
+[ 30%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/codal_target_hal_base.cpp.o
+[ 30%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/asm/CortexContextSwitch.s.o
+[ 31%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/dma.c.o
+/src/libraries/codal-rp2040/asm/CortexContextSwitch.s: Assembler messages:
+/src/libraries/codal-rp2040/asm/CortexContextSwitch.s: Warning: end of file not at end of a line; newline inserted
+[ 31%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/source/ram.c.o
+[ 32%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RaspberryPi/RP2040/Source/system_RP2040.c.o
+[ 32%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+[ 32%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_claim/claim.c.o
+[ 33%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_platform/platform.c.o
+[ 33%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+[ 33%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+[ 34%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+[ 34%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+[ 34%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_sync/sem.c.o
+[ 35%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_sync/lock_core.c.o
+[ 35%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_time/time.c.o
+[ 35%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_time/timeout_helper.c.o
+[ 36%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+[ 36%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_util/datetime.c.o
+[ 37%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_util/pheap.c.o
+[ 37%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_util/queue.c.o
+[ 37%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_sync/mutex.c.o
+[ 38%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/common/pico_sync/critical_section.c.o
+[ 38%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+[ 38%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+[ 39%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+[ 39%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+[ 39%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+[ 40%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+[ 40%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+[ 41%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+[ 41%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+[ 41%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+[ 42%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+[ 42%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_exception/exception.c.o
+[ 42%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+[ 43%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+[ 43%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+[ 43%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+[ 44%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_divider/divider.S.o
+[ 44%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.o
+[ 44%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.o
+[ 45%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+[ 45%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.o
+[ 46%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+[ 46%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.o
+[ 46%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.o
+[ 47%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+[ 47%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.o
+[ 47%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.o
+[ 48%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+[ 48%] Building ASM object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.o
+[ 48%] Building CXX object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.o
+[ 49%] Building C object libraries/codal-rp2040/CMakeFiles/codal-rp2040.dir/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.o
+[ 49%] Linking CXX static library ../../libcodal-rp2040.a
+[ 49%] Built target codal-rp2040
+Scanning dependencies of target codal-pi-pico
+[ 50%] Building CXX object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/model/PiPico.cpp.o
+[ 50%] Building CXX object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/model/PiPicoIO.cpp.o
+[ 51%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RaspberryPi/RP2040/Source/system_RP2040.c.o
+[ 51%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+[ 51%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.o
+[ 52%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_platform/platform.c.o
+[ 52%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+[ 52%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+[ 53%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+[ 53%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+[ 53%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_sync/sem.c.o
+[ 54%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_sync/lock_core.c.o
+[ 54%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_time/time.c.o
+[ 55%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_time/timeout_helper.c.o
+[ 55%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+[ 55%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_util/datetime.c.o
+[ 56%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_util/pheap.c.o
+[ 56%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_util/queue.c.o
+[ 56%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_sync/mutex.c.o
+[ 57%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/common/pico_sync/critical_section.c.o
+[ 57%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+[ 57%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+[ 58%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+[ 58%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+[ 58%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+[ 59%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+[ 59%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+[ 60%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+[ 60%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+[ 60%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+[ 61%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+[ 61%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_exception/exception.c.o
+[ 61%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+[ 62%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+[ 62%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+[ 62%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+[ 63%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_divider/divider.S.o
+[ 63%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.o
+[ 64%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.o
+[ 64%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+[ 64%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.o
+[ 65%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+[ 65%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.o
+[ 65%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.o
+[ 66%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+[ 66%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.o
+[ 66%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.o
+[ 67%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+[ 67%] Building ASM object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.o
+[ 67%] Building CXX object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.o
+[ 68%] Building C object libraries/codal-pi-pico/CMakeFiles/codal-pi-pico.dir/__/codal-rp2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.o
+[ 68%] Linking CXX static library ../../libcodal-pi-pico.a
+[ 68%] Built target codal-pi-pico
+Scanning dependencies of target PI-PICO
+[ 68%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/accelerometer/accelerometer.cpp.o
+[ 68%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/accelerometer/accelhw.cpp.o
+[ 69%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/advmath.cpp.o
+[ 69%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/buffer.cpp.o
+[ 69%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/control.cpp.o
+[ 70%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/controlgc.cpp.o
+[ 70%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/core.cpp.o
+[ 70%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/gc.cpp.o
+[ 71%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/loops.cpp.o
+[ 71%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/pxt.cpp.o
+[ 71%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/base/trig.cpp.o
+[ 72%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/codal.cpp.o
+[ 72%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/buttons/buttons.cpp.o
+[ 73%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/control.cpp.o
+[ 73%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/dmac.cpp.o
+[ 73%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/hf2.cpp.o
+[ 74%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/i2c.cpp.o
+[ 74%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/keyvaluestorage.cpp.o
+[ 74%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/light.cpp.o
+[ 75%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/pins.cpp.o
+[ 75%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/pinsAnalog.cpp.o
+[ 75%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/pinsDigital.cpp.o
+[ 76%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/pinsPWM.cpp.o
+[ 76%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/platform.cpp.o
+[ 76%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/spi.cpp.o
+[ 77%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/core---rp2040/usb.cpp.o
+[ 77%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/lcd/lcd.cpp.o
+[ 78%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/main.cpp.o
+[ 78%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/lightsensor/lightsensor.cpp.o
+[ 78%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/mixer---rp2040/melody.cpp.o
+[ 79%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/mixer---rp2040/sound.cpp.o
+[ 79%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/pointers.cpp.o
+[ 79%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/screen---st7735/image.cpp.o
+[ 80%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/screen---st7735/jddisplay.cpp.o
+[ 80%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/screen---st7735/panic.cpp.o
+[ 80%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/screen---st7735/screen.cpp.o
+[ 81%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/switch/switch.cpp.o
+[ 81%] Building CXX object CMakeFiles/PI-PICO.dir/pxtapp/thermometer/temperature.cpp.o
+[ 82%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/cmsis/stub/CMSIS/Device/RaspberryPi/RP2040/Source/system_RP2040.c.o
+[ 82%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.o
+[ 82%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_claim/claim.c.o
+[ 83%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_platform/platform.c.o
+[ 83%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_sync/sync.c.o
+[ 83%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o
+[ 84%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_irq/irq.c.o
+[ 84%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.o
+[ 84%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_sync/sem.c.o
+[ 85%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_sync/lock_core.c.o
+[ 85%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_time/time.c.o
+[ 85%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_time/timeout_helper.c.o
+[ 86%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_timer/timer.c.o
+[ 86%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_util/datetime.c.o
+[ 87%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_util/pheap.c.o
+[ 87%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_util/queue.c.o
+[ 87%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_sync/mutex.c.o
+[ 88%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/common/pico_sync/critical_section.c.o
+[ 88%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_pll/pll.c.o
+[ 88%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.o
+[ 89%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.o
+[ 89%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.o
+[ 89%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_spi/spi.c.o
+[ 90%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_i2c/i2c.c.o
+[ 90%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_uart/uart.c.o
+[ 91%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_flash/flash.c.o
+[ 91%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.o
+[ 91%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_pio/pio.c.o
+[ 92%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_dma/dma.c.o
+[ 92%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_exception/exception.c.o
+[ 92%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/hardware_divider/divider.S.o
+[ 93%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_runtime/runtime.c.o
+[ 93%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_printf/printf.c.o
+[ 93%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.o
+[ 94%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_divider/divider.S.o
+[ 94%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.o
+[ 94%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.o
+[ 95%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_math.c.o
+[ 95%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.o
+[ 96%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.o
+[ 96%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.o
+[ 96%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.o
+[ 97%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_math.c.o
+[ 97%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.o
+[ 97%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.o
+[ 98%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.o
+[ 98%] Building ASM object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.o
+[ 98%] Building CXX object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.o
+[ 99%] Building C object CMakeFiles/PI-PICO.dir/libraries/codal-rp2040/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.o
+[ 99%] Linking CXX executable PI-PICO
+[ 99%] Built target PI-PICO
+Scanning dependencies of target PI-PICO_hex
+Scanning dependencies of target PI-PICO_bin
+[100%] converting to hex file.
+[100%] converting to bin file.
+Executing post process command
+[100%] Built target PI-PICO_hex
+[100%] Built target PI-PICO_bin
+
+[
